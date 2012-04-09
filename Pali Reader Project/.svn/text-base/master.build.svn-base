@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+    <project name="PaliTextReader" default="build" basedir=".">
+	<description>Main build file for the Pali Text Reader. Install nant and run it on this build file.</description>
+    <target name="clean">
+        <nant buildfile="PluginInterface\PluginInterface.build" target="clean"/>
+	  <nant buildfile="Plugins\SamplePlugin\SamplePlugin.build" target="clean" />
+        <nant buildfile="Plugins\PaliDictionary\PaliDictionary.build" target="clean" />
+	  <nant buildfile="Plugins\BookSelector\BookSelector.build" target="clean" />
+	  <nant buildfile="Plugins\PaliTranslator\PaliTranslator.build" target="clean" />
+	  <nant buildfile="Plugins\AdjustFonts\AdjustFonts.build" target="clean" />
+	  <nant buildfile="Plugins\CanonSearchBM\CanonSearch.build" target="clean" />
+	  <nant buildfile="PaliReaderUtils\PaliReaderUtils.build" target="clean"/>
+	  <nant buildfile="SplashScreen\SplashScreen.build" target="clean"/>
+        <nant buildfile="Plugins\PaliViewer\PaliViewerControl.build" target="clean" />
+     	  <nant buildfile="PaliReader\PaliReader.build" target="clean"/>
+	   <delete>
+      	<fileset>
+        	        <include name="res\Plugins\*.dll" />
+     		</fileset>
+    	   </delete>
+    </target>
+    <target name="build" depends="plugins,splash">
+	<nant buildfile="PaliReader\PaliReader.build" target="build"/>
+		<mkdir dir="PaliReader\bin\Release\Canon" />
+		<mkdir dir="PaliReader\bin\Release\Dictionary" />
+		<mkdir dir="PaliReader\bin\Release\Icons" />
+		<mkdir dir="PaliReader\bin\Release\Plugins" />
+		<mkdir dir="PaliReader\bin\Release\Work" />
+			<copy todir="PaliReader\bin\Release\Canon">
+    				<fileset basedir="res\Canon">
+        				<include name="desc.rtf" />
+    				</fileset>
+			</copy>
+			<copy todir="PaliReader\bin\Release\Dictionary">
+    				<fileset basedir="res\Dictionary">
+        				<include name="*.*" />
+    				</fileset>
+			</copy>
+			<copy todir="PaliReader\bin\Release\Icons">
+    				<fileset basedir="res\Icons">
+        				<include name="*.*" />
+    				</fileset>
+			</copy>
+			<copy todir="PaliReader\bin\Release\Plugins">
+    				<fileset basedir="res\Plugins">
+        				<include name="*.*" />
+					<exclude name="PaliViewer.dll" />
+    				</fileset>
+			</copy>
+			<copy todir="PaliReader\bin\Release\Work">
+    				<fileset basedir="res\Work">
+        				<include name="*.*" />
+    				</fileset>
+			</copy>
+			<copy todir="PaliReader\bin\Release">
+    				<fileset basedir="lib">
+        				<include name="*.*" />
+    				</fileset>
+			</copy>
+			<copy todir="PaliReader\bin\Release">
+    				<fileset basedir="PluginInterface\bin\Release">
+        				<include name="*.dll" />
+    				</fileset>
+			</copy>
+			<copy todir="PaliReader\bin\Release">
+    				<fileset basedir="PaliReaderUtils\bin\Release">
+        				<include name="*.dll" />
+    				</fileset>
+			</copy>
+			<copy todir="PaliReader\bin\Release">
+    				<fileset basedir="SplashScreen\bin\Release">
+        				<include name="*.dll" />
+    				</fileset>
+			</copy>
+			<copy todir="PaliReader\bin\Release">
+    				<fileset basedir="res\Plugins">
+        				<include name="PaliViewer.dll" />
+    				</fileset>
+			</copy>
+    </target>
+    <target name="interface">
+        <nant buildfile="PluginInterface\PluginInterface.build" target="build"/>
+    </target>
+    <target name="splash">
+        <nant buildfile="SplashScreen\SplashScreen.build" target="build"/>
+    </target>
+    <target name="utils">
+        <nant buildfile="PaliReaderUtils\PaliReaderUtils.build" target="build"/>
+    </target>
+    <target name="plugins" depends="interface,utils" >
+        <nant buildfile="Plugins\SamplePlugin\SamplePlugin.build" target="build" />
+        <nant buildfile="Plugins\PaliDictionary\PaliDictionary.build" target="build" />
+        <nant buildfile="Plugins\BookSelector\BookSelector.build" target="build" />
+        <nant buildfile="Plugins\PaliViewer\PaliViewerControl.build" target="build" />
+	  <nant buildfile="Plugins\PaliTranslator\PaliTranslator.build" target="build" />
+	  <nant buildfile="Plugins\CanonSearchBM\CanonSearch.build" target="build" />
+	  <nant buildfile="Plugins\AdjustFonts\AdjustFonts.build" target="build" />
+    </target>
+</project>

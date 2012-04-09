@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/palireader/!svn/ver/120/Pali%20Reader%20Project/PaliReaderUtils
+END
+AalekhDecoder.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/palireader/!svn/ver/120/Pali%20Reader%20Project/PaliReaderUtils/AalekhDecoder.cs
+END
+AssemblyInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/palireader/!svn/ver/6/Pali%20Reader%20Project/PaliReaderUtils/AssemblyInfo.cs
+END
+ReportBugs.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/palireader/!svn/ver/105/Pali%20Reader%20Project/PaliReaderUtils/ReportBugs.cs
+END
+SendComment.cs
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/palireader/!svn/ver/100/Pali%20Reader%20Project/PaliReaderUtils/SendComment.cs
+END
+PropertyManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/palireader/!svn/ver/46/Pali%20Reader%20Project/PaliReaderUtils/PropertyManager.cs
+END
+NamingConverter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/palireader/!svn/ver/99/Pali%20Reader%20Project/PaliReaderUtils/NamingConverter.cs
+END
+PaliReaderUtils.build
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/palireader/!svn/ver/46/Pali%20Reader%20Project/PaliReaderUtils/PaliReaderUtils.build
+END
+Main.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/palireader/!svn/ver/6/Pali%20Reader%20Project/PaliReaderUtils/Main.cs
+END
+BCAccessor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/palireader/!svn/ver/60/Pali%20Reader%20Project/PaliReaderUtils/BCAccessor.cs
+END
+ReportBugs.resx
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/palireader/!svn/ver/105/Pali%20Reader%20Project/PaliReaderUtils/ReportBugs.resx
+END
+SendComment.resx
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/palireader/!svn/ver/37/Pali%20Reader%20Project/PaliReaderUtils/SendComment.resx
+END
+AalekhFormatter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/palireader/!svn/ver/6/Pali%20Reader%20Project/PaliReaderUtils/AalekhFormatter.cs
+END
+CompoundAnalyzer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/37/Pali%20Reader%20Project/PaliReaderUtils/CompoundAnalyzer.cs
+END

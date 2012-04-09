@@ -1,0 +1,102 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Required "Version" section.
+;   Contains INF version information
+[Version]
+Signature   = "$Windows NT$"    ; Should be $Windows NT$ or $Windows 98$ or other OS name
+Provider    = "PavelBure"       ; full app name will be "<Provider> <AppName>"
+CESignature = "$Windows CE$"    ; Must be $Windows CE$
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Required "CEStrings" section
+;   Specific strings used by Windows CE AppInstall
+[CEStrings]
+AppName     = "PaliTextReader" ; full app name will be "<Provider> <AppName>"
+InstallDir  = %CE1%\%AppName%    ; "\Program Files\PaliTextReader" (default install directory, which can be changed by end user.)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Required "CEDevice" section
+;   Specifies the various types of CAB files that will be generated
+[CEDevice]
+UnsupportedPlatforms    = "HPC","Jupiter","Palm PC2"
+VersionMin              = 3.0
+VersionMax              = 5.0
+
+[CEDevice.PPC2003_ARM]
+ProcessorType           = 2577      ; ARM CPU
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Required "SourceDisksNames" section
+;   Specifies the source directories of the binary files
+;   Format:
+;       <source ID> = ,<label>,,<source directory>
+;       <source ID> will be used to specify the source files belonging to this directory
+;       <label> is unused
+;       <source directory> is the relative or absolute directory of the source files
+[SourceDisksNames]                      ; CPU-independent files
+1 = ,"Common Files",,.
+
+[SourceDisksNames.PPC2003_ARM]          ; ARM-specific files for Pocket PC 2003
+2 = ,"PPC ARM Files",,ARMV4Rel         ; files are in the relative path
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Required "SourceDisksFiles" section
+;   Specifies the source filenames that will be packaged in the CAB files
+;   Format:
+;       <filename> = <source ID>
+;       <filename> is the source filename (enclose in doublequotes for long filenames)
+;       <source ID> is the ID used in [SourceDisksNames] to specify the source directory
+[SourceDisksFiles]
+    ; CPU-independent files
+"style.css"             = 1
+    ; CPU-specific files
+"PaliTextReader.exe"             = 2     ; main executable
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Required "DefaultInstall" section
+;   Specifies the INF sections for file copying, registry settings and creating shortcuts
+;   INF sections that are not listed here will not be used
+[DefaultInstall]
+CopyFiles   = Files.InstallDir    ; Required INF sections that lists the files to be copied
+AddReg = AddReg.Version1
+CEShortcuts = Links                             ; Optional INF sections that lists the shortcuts to be created
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Required "DestinationDirs" section
+;   Specifies the directories to use for the file copy lists
+;   Format:
+;       <section name> = 0,<dest directory>
+;       <section name> is the section name used in "[DefaultInstall] CopyFiles"
+;       <dest directory> is the destination directory, using an absolute device path, the directory macros, or the install directory %InstallDir%
+[DestinationDirs]
+Files.InstallDir    = 0,%InstallDir%
+DefaultDestDir      = 0,%InstallDir%
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Required sections specified in "[DefaultInstall] CopyFiles" key
+;   Specifies the files to copy
+;   Format:
+;       <dest filename>,<source filename>,,<copy flags>
+;       <dest filename> is the destination filename (or the source filename if <source filename> is empty)
+;       <source filename> is the source filename
+;       <copy flags> is the copy flags to use
+[Files.InstallDir]
+PaliTextReader.exe
+style.css
+
+[Reg.Version1]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Sections specified in "[DefaultInstall] CEShortcuts" key
+;   Specifies the shortcuts to create
+;   Format:
+;       <shortcut filename>,<shortcut type>,<target file/path>[,<standard dest path>]
+;       <shortcut filename> is the filename of the shortcut
+;       <shortcut type> specifies if the shortcut is to a file or a folder
+;       <target file/path> is the target filename or pathname, which depends on the <shortcut type> flag used
+;       <standard dest path> is an optional destination directory macro (or %InstallDir%) to use
+[Links]
+"Pali Text Reader",0,"PaliTextReader.exe",%CE11%         ; shortcut to a file, created in the standard destination path %CE14%
+

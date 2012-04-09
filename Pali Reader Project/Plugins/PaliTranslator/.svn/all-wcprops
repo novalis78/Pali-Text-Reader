@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/palireader/!svn/ver/17/Pali%20Reader%20Project/Plugins/PaliTranslator
+END
+AssemblyInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/palireader/!svn/ver/13/Pali%20Reader%20Project/Plugins/PaliTranslator/AssemblyInfo.cs
+END
+PaliTranslator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svnroot/palireader/!svn/ver/17/Pali%20Reader%20Project/Plugins/PaliTranslator/PaliTranslator.cs
+END
+PaliTranslator.build
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/palireader/!svn/ver/14/Pali%20Reader%20Project/Plugins/PaliTranslator/PaliTranslator.build
+END
+PaliReaderPlugin.PaliTranslator.resources
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svnroot/palireader/!svn/ver/13/Pali%20Reader%20Project/Plugins/PaliTranslator/PaliReaderPlugin.PaliTranslator.resources
+END

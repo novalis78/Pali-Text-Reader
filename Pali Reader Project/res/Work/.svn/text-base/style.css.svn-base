@@ -1,0 +1,59 @@
+/* This is the stylesheet for Roman UTF-8 Unicode encoding. 
+*/
+
+body 
+{ 
+font-family:"Times Ext Roman", "Arial Unicode MS", "Indic Times", "Utopia Unicode IndoLatin", "Tahoma";
+/*<BODYF>*/font-size:16pt;/*</BODYF>*/;/*<FCOL>*/color:#000000/*</FCOL>*/;
+/*<BIMG>*/background-image:url(file:///<pathToImage>);/*</BIMG>*/
+}
+
+SPAN {}
+.variant {color: blue}
+
+p {
+border-top: 0in; border-bottom: 0in;
+padding-top: 0in; padding-bottom: 0in;
+margin-top: 0in; margin-bottom: 0.5cm;
+}
+/*  */
+.c01 { font-size: 12pt; text-indent: 2em; margin-bottom: 0em;}
+
+
+.c02 { font-size: 12pt;}
+
+
+.c03 { /*<PF>*/font-size:16pt;/*</PF>*/ text-indent: 2em;}
+
+/* Namo tassa, and nitthita -- no unique structural distinction */
+.c06 { /*<NF>*/font-size: 12pt;/*</NF>*/ text-align:center;}
+
+/* Unindented text */
+.c07 { font-size: 12pt;}
+
+/* Book */
+.c10 { /*<BF>*/font-size:26pt;/*</BF>*/ text-align:center; font-weight: bold;}
+
+/* Sutta */
+.c11 { /*<SUF>*/font-size: 18pt;/*</SUF>*/ text-align:center; font-weight: bold;}
+
+/* Nikaaya */
+.c12 { /*<NIF>*/font-size: 24pt;/*</NIF>*/ text-align:center; font-weight: bold;}
+
+/* Section (above 14)*/
+.c13 { /*<SF>*/font-size: 12pt;/*</SF>*/ text-align:center; font-weight: bold;}
+
+/* Section */
+.c14 { font-size: 12pt; text-align:center; font-weight: bold;}
+
+/* Gatha line */
+.c21 { /*<GF>*/font-size: 12pt;/*</GF>*/ text-indent: 4em; margin-bottom: 0em;}
+
+/* Gatha line */
+.c22 { font-size: 12pt; text-indent: 7em; margin-bottom: 0.5cm;}
+
+/* Gatha line */
+.c26 { font-size: 12pt; text-indent: 4em; margin-bottom: 0em;}
+
+/* Gatha line */
+.c27 { font-size: 12pt; text-indent: 7em; margin-bottom: 0em;}

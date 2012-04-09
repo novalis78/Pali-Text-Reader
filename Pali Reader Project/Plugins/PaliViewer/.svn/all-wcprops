@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/palireader/!svn/ver/131/Pali%20Reader%20Project/Plugins/PaliViewer
+END
+AssemblyInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/palireader/!svn/ver/10/Pali%20Reader%20Project/Plugins/PaliViewer/AssemblyInfo.cs
+END
+KeyUpHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/palireader/!svn/ver/34/Pali%20Reader%20Project/Plugins/PaliViewer/KeyUpHandler.cs
+END
+MouseMoveHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/palireader/!svn/ver/16/Pali%20Reader%20Project/Plugins/PaliViewer/MouseMoveHandler.cs
+END
+KeyDownHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/palireader/!svn/ver/34/Pali%20Reader%20Project/Plugins/PaliViewer/KeyDownHandler.cs
+END
+MouseOverHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/palireader/!svn/ver/16/Pali%20Reader%20Project/Plugins/PaliViewer/MouseOverHandler.cs
+END
+PaliViewerControl.build
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svnroot/palireader/!svn/ver/115/Pali%20Reader%20Project/Plugins/PaliViewer/PaliViewerControl.build
+END
+PaliViewer.resx
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/117/Pali%20Reader%20Project/Plugins/PaliViewer/PaliViewer.resx
+END
+PaliViewer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/palireader/!svn/ver/131/Pali%20Reader%20Project/Plugins/PaliViewer/PaliViewer.cs
+END
+EventBaseHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/palireader/!svn/ver/34/Pali%20Reader%20Project/Plugins/PaliViewer/EventBaseHandler.cs
+END

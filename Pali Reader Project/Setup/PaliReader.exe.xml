@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <section name="General">
+    <entry name="OnlineMode">true</entry>
+  </section>
+</profile>

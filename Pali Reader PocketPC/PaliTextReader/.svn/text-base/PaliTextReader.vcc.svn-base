@@ -1,0 +1,243 @@
+; CLW file contains information for the MFC ClassWizard
+
+[General Info]
+Version=1
+LastClass=CSelectBookDlg
+LastTemplate=CDialog
+NewFileInclude1=#include "stdafx.h"
+NewFileInclude2=#include "PaliTextReader.h"
+
+ClassCount=8
+Class1=CPaliTextReaderApp
+Class2=CPaliTextReaderDlg
+
+ResourceCount=15
+Resource2=IDD_PALITEXTREADER_DIALOG
+Resource3=IDR_SEARCH_TOOLBAR (Neutral)
+Resource4=IDD_BOOKMARKEDIT (Neutral)
+Resource5=IDD_SELECTBOOK (Neutral)
+Resource1=IDR_MAINFRAME
+Class3=CSelectBookDlg
+Resource6=IDD_PREFERENCES (Neutral)
+Resource7=IDR_EMPTYMENU (Neutral)
+Resource8=IDR_CONTEXTMENU (Neutral)
+Class4=CBookmarkEditDlg
+Class5=CPreferencesDlg
+Class6=CDictionaryCtl
+Resource9=IDR_MAINMENU (Neutral)
+Class7=CBookmarkDoc
+Resource10=IDR_TREEMENU1 (Neutral)
+Resource11=IDD_PALI_ENTRY (Neutral)
+Resource12=IDR_TREEMENU (Neutral)
+Resource13=IDD_PALITEXTREADER_DIALOG (Neutral)
+Resource14=IDR_EDITMENU (Neutral)
+Class8=CPaliTextEntryDlg
+Resource15=IDR_MAIN_TOOLBAR (Neutral)
+
+[CLS:CPaliTextReaderApp]
+Type=0
+HeaderFile=PaliTextReader.h
+ImplementationFile=PaliTextReader.cpp
+Filter=N
+LastObject=CPaliTextReaderApp
+BaseClass=CWinApp
+VirtualFilter=AC
+
+[CLS:CPaliTextReaderDlg]
+Type=0
+HeaderFile=PaliTextReaderDlg.h
+ImplementationFile=PaliTextReaderDlg.cpp
+Filter=T
+LastObject=CPaliTextReaderDlg
+BaseClass=CDialog
+VirtualFilter=dWC
+
+
+[DLG:IDD_PALITEXTREADER_DIALOG]
+Type=1
+ControlCount=3
+Control1=IDOK,button,1342242817
+Control2=IDCANCEL,button,1342242816
+Control3=IDC_STATIC,static,1342308352
+Class=CPaliTextReaderDlg
+
+[CLS:CSelectBookDlg]
+Type=0
+HeaderFile=SelectBookDlg.h
+ImplementationFile=SelectBookDlg.cpp
+BaseClass=CDialog
+Filter=D
+VirtualFilter=dWC
+LastObject=CSelectBookDlg
+
+[DLG:IDD_PALITEXTREADER_DIALOG (Neutral)]
+Type=1
+Class=CPaliTextReaderDlg
+ControlCount=3
+Control1=IDC_CHAPTERSELECTOR,combobox,1344339971
+Control2=IDC_TEXTVIEWER,static,1073741824
+Control3=IDC_DICTIONARY,static,1073872896
+
+[DLG:IDD_SELECTBOOK (Neutral)]
+Type=1
+Class=CSelectBookDlg
+ControlCount=3
+Control1=IDC_BOOKS,SysTreeView32,1350631467
+Control2=IDC_OK,button,1342242817
+Control3=IDC_CANCEL,button,1342242816
+
+[DLG:IDD_PREFERENCES (Neutral)]
+Type=1
+Class=CPreferencesDlg
+ControlCount=9
+Control1=IDC_LIBRARY_LOCATION,edit,1350631552
+Control2=IDC_LIBRARY_BROWSE,button,1342242816
+Control3=IDC_OPENLAST,button,1342242819
+Control4=IDOK,button,1342242816
+Control5=IDCANCEL,button,1342242816
+Control6=IDC_STATIC,static,1342308352
+Control7=IDC_STATIC,static,1342308352
+Control8=IDC_DICTIONARY_FILE,edit,1350631552
+Control9=IDC_DICTIONARY_BROWSE,button,1342242816
+
+[DLG:IDD_BOOKMARKEDIT (Neutral)]
+Type=1
+Class=CBookmarkEditDlg
+ControlCount=9
+Control1=IDC_BOOKMARKNAME,edit,1350631552
+Control2=IDC_STATIC,static,1342308352
+Control3=IDC_STATIC,static,1342308352
+Control4=IDC_BOOKMARKPATH,listbox,1352728835
+Control5=IDC_STATIC,static,1342308352
+Control6=IDC_BOOKMARKFILE,edit,1350633600
+Control7=IDOK,button,1342242817
+Control8=IDC_DELETEBOOKMARK,button,1342242816
+Control9=IDCANCEL,button,1342242816
+
+[MNU:IDR_MAINMENU (Neutral)]
+Type=1
+Class=?
+Command1=ID_SEARCH
+Command2=ID_BOOKMARK_PAGE
+Command3=IDM_SHOWDIC
+Command4=IDM_SELECTBOOK
+Command5=IDM_PREFERENCES
+Command6=IDM_EXIT
+CommandCount=6
+
+[MNU:IDR_CONTEXTMENU (Neutral)]
+Type=1
+Class=?
+CommandCount=0
+
+[CLS:CBookmarkEditDlg]
+Type=0
+HeaderFile=BookmarkEditDlg.h
+ImplementationFile=BookmarkEditDlg.cpp
+BaseClass=CDialog
+Filter=D
+LastObject=CBookmarkEditDlg
+VirtualFilter=dWC
+
+[CLS:CPreferencesDlg]
+Type=0
+HeaderFile=PreferencesDlg.h
+ImplementationFile=PreferencesDlg.cpp
+BaseClass=CDialog
+Filter=D
+VirtualFilter=dWC
+LastObject=ID_BOOKMARK_PAGE
+
+[MNU:IDR_EMPTYMENU (Neutral)]
+Type=1
+Class=?
+Command1=ID_MENUITEM32790
+CommandCount=1
+
+[CLS:CDictionaryCtl]
+Type=0
+HeaderFile=DictionaryCtl.h
+ImplementationFile=DictionaryCtl.cpp
+BaseClass=CTabCtrl
+Filter=W
+LastObject=CDictionaryCtl
+VirtualFilter=UWC
+
+[CLS:CBookmarkDoc]
+Type=0
+HeaderFile=BookmarkDoc.h
+ImplementationFile=BookmarkDoc.cpp
+BaseClass=CDocument
+Filter=N
+LastObject=CBookmarkDoc
+
+[MNU:IDR_EDITMENU (Neutral)]
+Type=1
+Class=?
+CommandCount=0
+
+[MNU:IDR_TREEMENU1 (Neutral)]
+Type=1
+Class=?
+Command1=IDM_BOOKMARK
+Command2=IDM_RENAME
+Command3=IDM_DELETEBOOKMARK
+CommandCount=3
+
+[MNU:IDR_TREEMENU (Neutral)]
+Type=1
+Class=?
+Command1=IDM_BOOKMARK
+Command2=IDM_RENAME
+Command3=IDM_DELETEBOOKMARK
+Command4=ID_FIND_ITEM
+CommandCount=4
+
+[TB:IDR_MAIN_TOOLBAR (Neutral)]
+Type=1
+Class=?
+Command1=IDM_SELECTBOOK
+Command2=IDM_SHOWDIC
+Command3=ID_MOVE_FIRST
+Command4=ID_MOVE_PREV
+Command5=ID_MOVE_NEXT
+Command6=ID_MOVE_LAST
+CommandCount=6
+
+[TB:IDR_SEARCH_TOOLBAR (Neutral)]
+Type=1
+Class=?
+Command1=ID_MOVE_FIRST
+Command2=ID_MOVE_PREV
+Command3=ID_MOVE_NEXT
+Command4=ID_MOVE_LAST
+CommandCount=4
+
+[DLG:IDD_PALI_ENTRY (Neutral)]
+Type=1
+Class=CPaliTextEntryDlg
+ControlCount=14
+Control1=IDOK,button,1342242817
+Control2=IDCANCEL,button,1342242816
+Control3=IDC_HINT,static,1342308352
+Control4=IDC_PALI_TEXT,edit,1350631552
+Control5=IDC_BUTTON_AA,button,1342242816
+Control6=IDC_BUTTON_II,button,1342242816
+Control7=IDC_BUTTON_UU,button,1342242816
+Control8=IDC_BUTTON_MDOT,button,1342242816
+Control9=IDC_BUTTON_NDOTABOVE,button,1342242816
+Control10=IDC_BUTTON_NTILDE,button,1342242816
+Control11=IDC_BUTTON_TDOT,button,1342242816
+Control12=IDC_BUTTON_DDOT,button,1342242816
+Control13=IDC_BUTTON_NDOTBELOW,button,1342242816
+Control14=IDC_BUTTON_LDOT,button,1342242816
+
+[CLS:CPaliTextEntryDlg]
+Type=0
+HeaderFile=PaliTextEntryDlg.h
+ImplementationFile=PaliTextEntryDlg.cpp
+BaseClass=CDialog
+Filter=D
+LastObject=CPaliTextEntryDlg
+VirtualFilter=dWC
+

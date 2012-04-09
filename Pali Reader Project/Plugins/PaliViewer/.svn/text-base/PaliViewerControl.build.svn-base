@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="PaliViewerControl" default="build">
+  <description>SharpDevelop generated NAnt 0.85 build file.</description>
+  <!--Set debug property if not set-->
+  <ifnot test="${property::exists('debug')}">
+    <property name="debug" value="false" />
+  </ifnot>
+  <!--The 'init' target.  Creates folders needed for the build.-->
+  <target name="init" depends="init.debug, init.release" />
+  <!--The 'clean' target.  Removes compiled output.-->
+  <target name="clean" depends="clean.debug, clean.release" />
+  <!--The 'gacreferences' target.-->
+  <target name="gacreferences" depends="gacreferences.debug, gacreferences.release" />
+  <!--The 'build' target.-->
+  <target name="build" depends="build.debug, build.release" />
+  <!--The 'test' target.-->
+  <target name="test" depends="test.debug, test.release" />
+  <!--Set up various properties that will be referred to in the various nant targets.-->
+  <!--The output directory.-->
+  <property name="outputdir.debug" value=".\bin\Debug">
+  </property>
+  <!--The name of the assembly.-->
+  <property name="assembly.debug" value="PaliViewer">
+  </property>
+  <!--The output file's extension.-->
+  <property name="extension.debug" value="dll">
+  </property>
+  <!--The initialisation target.-->
+  <target name="init.debug" if="${debug}">
+    <mkdir dir="${outputdir.debug}" />
+  </target>
+  <!--The 'clean' target.  Here we delete the built output files and extra files which are not directly specified in 
+		      the .prjx file (e.g. ".pdb", ".xml").-->
+  <target name="clean.debug" if="${debug}">
+    <delete>
+      <fileset>
+        <include name="${outputdir.debug}\${assembly.debug}.${extension.debug}" />
+        <include name="${outputdir.debug}\${assembly.debug}.pdb" />
+        <include name="${outputdir.debug}\${assembly.debug}.xml" />
+        <include name="${outputdir.debug}\*.config" />
+      </fileset>
+    </delete>
+ <delete dir="bin" />
+  </target>
+  <!--The 'build' target.-->
+  <target name="build.debug" depends="init.debug, gacreferences.debug" if="${debug}">
+    <!--Compiles the code -->
+    <csc target="library" output="${outputdir.debug}\${assembly.debug}.${extension.debug}" warninglevel="4" debug="True" optimize="False" unsafe="False" checked="False" noconfig="False" nostdlib="False" define="DEBUG;TRACE" warnaserror="False">
+      <sources>
+        <include name=".\AssemblyInfo.cs" />
+        <include name=".\PaliViewer.cs" />
+    	<include name=".\EventBaseHandler.cs" />
+    	<include name=".\MouseOverHandler.cs" />
+    	<include name=".\MouseMoveHandler.cs" />
+    	<include name=".\KeyDownHandler.cs" />
+    	<include name=".\KeyUpHandler.cs" />
+      </sources>
+      <references>
+        <include name="${utils::get-gacpath( 'Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ) }" />
+        <include name="..\..\lib\AxInterop.SHDocVw.dll" />
+        <include name="..\..\lib\Interop.SHDocVw.dll" />
+        <include name="..\..\lib\Sloppycode.Controls.WebBrowserEx.dll" />
+    	<include name="..\..\lib\Tree2.dll" />
+      </references>
+      <resources>
+        <include name=".resx" />
+      </resources>
+    </csc>
+			<copy todir="..\..\res\Plugins">
+    				<fileset basedir="${outputdir.debug}">
+        				<include name="*.dll" />
+    				</fileset>
+			</copy>
+  				<copy todir="..\..\PaliReader\bin\Release">
+    				<fileset basedir="${outputdir.debug}">
+        				<include name="*.dll" />
+    				</fileset>
+			</copy>
+    <!--Copy app.config file to output folder and rename it appropriately -->
+  </target>
+  <!--The test target.  Only supports Nunit 2 -->
+  <target name="test.debug" depends="build.debug" if="${debug}">
+    <nunit2>
+      <formatter type="Plain" />
+      <test assemblyname="${outputdir.debug}\${assembly.debug}.${extension.debug}" appconfig="${outputdir.debug}\${assembly.debug}.${extension.debug}.config" />
+    </nunit2>
+  </target>
+  <!--Generates a property for each Gac reference.  The property name is set to the name of the assembly-->
+  <target name="gacreferences.debug" if="${debug}">
+    <echo message="Importing GetGacPath script..." />
+    <script language="C#" prefix="utils">
+      <code>                 
+
+				[Function("get-gacpath")]
+				public static string GetGacPath( string assemblyName  ) 
+				{
+					string CodeBase = GetCodeBase( assemblyName );
+
+					return CodeBase.Replace( "file:///", "" );
+				}
+
+				/// 
+				/// Gets the code base for the specified assembly name.
+				/// 
+				public static string GetCodeBase( string assemblyName )
+				{
+					string CodeBase = String.Empty;
+		
+					System.Reflection.Assembly Assembly = 
+						System.Reflection.Assembly.LoadWithPartialName( assemblyName );
+	
+					if( Assembly != null )
+					{
+						CodeBase = Assembly.CodeBase;
+					}
+
+					return CodeBase;
+				}
+      			</code>
+    </script>
+  </target>
+  <!--Set up various properties that will be referred to in the various nant targets.-->
+  <!--The output directory.-->
+  <property name="outputdir.release" value=".\bin\Release">
+  </property>
+  <!--The name of the assembly.-->
+  <property name="assembly.release" value="PaliViewer">
+  </property>
+  <!--The output file's extension.-->
+  <property name="extension.release" value="dll">
+  </property>
+  <!--The initialisation target.-->
+  <target name="init.release" unless="${debug}">
+    <mkdir dir="${outputdir.release}" />
+  </target>
+  <!--The 'clean' target.  Here we delete the built output files and extra files which are not directly specified in 
+		      the .prjx file (e.g. ".pdb", ".xml").-->
+  <target name="clean.release" unless="${debug}">
+    <delete>
+      <fileset>
+        <include name="${outputdir.release}\${assembly.release}.${extension.release}" />
+        <include name="${outputdir.release}\${assembly.release}.pdb" />
+        <include name="${outputdir.release}\${assembly.release}.xml" />
+        <include name="${outputdir.release}\*.config" />
+      </fileset>
+    </delete>
+ <delete dir="bin" />
+  </target>
+  <!--The 'build' target.-->
+  <target name="build.release" depends="init.release, gacreferences.release" unless="${debug}">
+    <!--Compiles the code -->
+    <csc target="library" output="${outputdir.release}\${assembly.release}.${extension.release}" warninglevel="4" debug="False" optimize="True" unsafe="False" checked="False" noconfig="False" nostdlib="False" define="TRACE" warnaserror="False">
+      <sources>
+        <include name=".\AssemblyInfo.cs" />
+        <include name=".\PaliViewer.cs" />
+    	<include name=".\EventBaseHandler.cs" />
+    	<include name=".\MouseOverHandler.cs" />
+    	<include name=".\MouseMoveHandler.cs" />
+    	<include name=".\KeyDownHandler.cs" />
+    	<include name=".\KeyUpHandler.cs" />
+      </sources>
+      <references>
+        <!--include name="${utils::get-gacpath( 'Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ) }" /-->
+        <include name="..\..\lib\Microsoft.mshtml.dll" />
+      	<include name="..\..\lib\AxInterop.SHDocVw.dll" />
+        <include name="..\..\lib\Interop.SHDocVw.dll" />
+        <include name="..\..\lib\Sloppycode.Controls.WebBrowserEx.dll" />
+    	<include name="..\..\lib\Tree2.dll" />
+      </references>
+      <resources>
+        <include name=".resx" />
+      </resources>
+    </csc>
+			<copy todir="..\..\res\Plugins">
+    				<fileset basedir="${outputdir.release}">
+        				<include name="*.dll" />
+    				</fileset>
+			</copy>
+  	  		<copy todir="..\..\PaliReader\bin\Release">
+    				<fileset basedir="${outputdir.debug}">
+        				<include name="*.dll" />
+    				</fileset>
+			</copy>
+    <!--Copy app.config file to output folder and rename it appropriately -->
+  </target>
+  <!--The test target.  Only supports Nunit 2 -->
+  <target name="test.release" depends="build.release" unless="${debug}">
+    <nunit2>
+      <formatter type="Plain" />
+      <test assemblyname="${outputdir.release}\${assembly.release}.${extension.release}" appconfig="${outputdir.release}\${assembly.release}.${extension.release}.config" />
+    </nunit2>
+  </target>
+  <!--Generates a property for each Gac reference.  The property name is set to the name of the assembly-->
+  <target name="gacreferences.release" unless="${debug}">
+    <echo message="Importing GetGacPath script..." />
+    <script language="C#" prefix="utils">
+      <code>                 
+
+				[Function("get-gacpath")]
+				public static string GetGacPath( string assemblyName  ) 
+				{
+					string CodeBase = GetCodeBase( assemblyName );
+
+					return CodeBase.Replace( "file:///", "" );
+				}
+
+				/// 
+				/// Gets the code base for the specified assembly name.
+				/// 
+				public static string GetCodeBase( string assemblyName )
+				{
+					string CodeBase = String.Empty;
+		
+					System.Reflection.Assembly Assembly = 
+						System.Reflection.Assembly.LoadWithPartialName( assemblyName );
+	
+					if( Assembly != null )
+					{
+						CodeBase = Assembly.CodeBase;
+					}
+
+					return CodeBase;
+				}
+      			</code>
+    </script>
+  </target>
+</project>

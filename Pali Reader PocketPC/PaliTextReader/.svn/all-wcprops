@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader
+END
+StdAfx.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/palireader/!svn/ver/91/Pali%20Reader%20PocketPC/PaliTextReader/StdAfx.h
+END
+IndexReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/palireader/!svn/ver/123/Pali%20Reader%20PocketPC/PaliTextReader/IndexReader.h
+END
+PaliTextReader.rc
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.rc
+END
+BookmarkDoc.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/palireader/!svn/ver/123/Pali%20Reader%20PocketPC/PaliTextReader/BookmarkDoc.h
+END
+PaliTextEntryDlg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextEntryDlg.cpp
+END
+PaliTextReaderDlg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReaderDlg.cpp
+END
+PaliTextReader.vcb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.vcb
+END
+PaliTextReader.vcc
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.vcc
+END
+style.css
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/palireader/!svn/ver/91/Pali%20Reader%20PocketPC/PaliTextReader/style.css
+END
+DictionaryCtl.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/DictionaryCtl.h
+END
+PaliTextReader.vcl
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.vcl
+END
+PaliTextReader.vco
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.vco
+END
+PaliTextReader.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.h
+END
+PaliTextReader.vcp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.vcp
+END
+SelectBookDlg.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/SelectBookDlg.h
+END
+PreferencesDlg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/123/Pali%20Reader%20PocketPC/PaliTextReader/PreferencesDlg.cpp
+END
+StdAfx.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/palireader/!svn/ver/91/Pali%20Reader%20PocketPC/PaliTextReader/StdAfx.cpp
+END
+PaliTextReader.vcw
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/palireader/!svn/ver/91/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.vcw
+END
+IndexReader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/IndexReader.cpp
+END
+BookmarkDoc.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/palireader/!svn/ver/123/Pali%20Reader%20PocketPC/PaliTextReader/BookmarkDoc.cpp
+END
+resource.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/resource.h
+END
+PaliTextReader.inf
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/palireader/!svn/ver/91/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.inf
+END
+DictionaryCtl.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/DictionaryCtl.cpp
+END
+PaliTextEntryDlg.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextEntryDlg.h
+END
+newres.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/palireader/!svn/ver/91/Pali%20Reader%20PocketPC/PaliTextReader/newres.h
+END
+PaliTextReaderDlg.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReaderDlg.h
+END
+PaliTextReader.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.cpp
+END
+PaliTextReader.aps
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/PaliTextReader.aps
+END
+SelectBookDlg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/palireader/!svn/ver/133/Pali%20Reader%20PocketPC/PaliTextReader/SelectBookDlg.cpp
+END
+build_cab.bat
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/palireader/!svn/ver/91/Pali%20Reader%20PocketPC/PaliTextReader/build_cab.bat
+END
+ReadMe.txt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/palireader/!svn/ver/91/Pali%20Reader%20PocketPC/PaliTextReader/ReadMe.txt
+END
+PreferencesDlg.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/palireader/!svn/ver/91/Pali%20Reader%20PocketPC/PaliTextReader/PreferencesDlg.h
+END

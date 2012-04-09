@@ -1,0 +1,1 @@
+"C:\Program Files\Windows CE Tools\wce420\POCKET PC 2003\Tools\cabwiz.exe" PaliTextReader.inf  /err errors.err /cpu PPC2003_ARM

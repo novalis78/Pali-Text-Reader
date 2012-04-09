@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/palireader/!svn/ver/108/Pali%20Reader%20Project/Plugins/CanonSearchBM
+END
+AssemblyInfo.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/palireader/!svn/ver/41/Pali%20Reader%20Project/Plugins/CanonSearchBM/AssemblyInfo.cs
+END
+BMSearcher.cs
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/palireader/!svn/ver/29/Pali%20Reader%20Project/Plugins/CanonSearchBM/BMSearcher.cs
+END
+CanonSearch.build
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/palireader/!svn/ver/70/Pali%20Reader%20Project/Plugins/CanonSearchBM/CanonSearch.build
+END
+SearchDialog.resx
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svnroot/palireader/!svn/ver/45/Pali%20Reader%20Project/Plugins/CanonSearchBM/SearchDialog.resx
+END
+SearchResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/palireader/!svn/ver/74/Pali%20Reader%20Project/Plugins/CanonSearchBM/SearchResult.cs
+END
+ShowSearchResults.resx
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svnroot/palireader/!svn/ver/41/Pali%20Reader%20Project/Plugins/CanonSearchBM/ShowSearchResults.resx
+END
+SearchDialog.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/palireader/!svn/ver/108/Pali%20Reader%20Project/Plugins/CanonSearchBM/SearchDialog.cs
+END
+ShowSearchResults.cs
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/palireader/!svn/ver/95/Pali%20Reader%20Project/Plugins/CanonSearchBM/ShowSearchResults.cs
+END
+BMHashTable.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/palireader/!svn/ver/29/Pali%20Reader%20Project/Plugins/CanonSearchBM/BMHashTable.cs
+END

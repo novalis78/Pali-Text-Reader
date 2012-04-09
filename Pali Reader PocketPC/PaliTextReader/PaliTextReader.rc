@@ -1,0 +1,410 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PALITEXTREADER_DIALOG DIALOG DISCARDABLE  0, 0, 136, 139
+STYLE WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "Pali Text Reader"
+FONT 8, "System"
+BEGIN
+    COMBOBOX        IDC_CHAPTERSELECTOR,0,1,136,69,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_TEXTVIEWER,0,0,136,137,NOT WS_VISIBLE | NOT 
+                    WS_GROUP
+    LTEXT           "",IDC_DICTIONARY,0,77,136,60,NOT WS_VISIBLE
+END
+
+IDD_SELECTBOOK DIALOG DISCARDABLE  0, 0, 138, 141
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "System"
+BEGIN
+    CONTROL         "Tree1",IDC_BOOKS,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_EDITLABELS | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,0,1,137,125
+    DEFPUSHBUTTON   "OK",IDC_OK,0,128,61,13
+    PUSHBUTTON      "Cancel",IDC_CANCEL,75,128,62,13
+END
+
+IDD_PREFERENCES DIALOG DISCARDABLE  0, 0, 126, 150
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_LIBRARY_LOCATION,1,12,83,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_LIBRARY_BROWSE,89,13,35,10
+    CONTROL         "open last book at startup",IDC_OPENLAST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,1,61,122,13
+    PUSHBUTTON      "OK",IDOK,5,124,51,14
+    PUSHBUTTON      "Cancel",IDCANCEL,61,125,55,14
+    LTEXT           "Library location:",IDC_STATIC,2,2,64,8
+    LTEXT           "Dictionary:",IDC_STATIC,1,28,82,10
+    EDITTEXT        IDC_DICTIONARY_FILE,1,40,83,11,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_DICTIONARY_BROWSE,88,41,34,11
+END
+
+IDD_PALI_ENTRY DIALOG DISCARDABLE  0, 0, 135, 141
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pali text  entry"
+FONT 10, "CN-Times"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,1,71,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,81,71,50,14
+    LTEXT           "Pali text:",IDC_HINT,1,1,132,9
+    EDITTEXT        IDC_PALI_TEXT,1,11,132,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "aa",IDC_BUTTON_AA,1,28,15,11
+    PUSHBUTTON      "ii",IDC_BUTTON_II,19,28,15,11
+    PUSHBUTTON      "uu",IDC_BUTTON_UU,37,28,15,11
+    PUSHBUTTON      ".m",IDC_BUTTON_MDOT,1,44,15,11
+    PUSHBUTTON      "'n",IDC_BUTTON_NDOTABOVE,19,44,15,11
+    PUSHBUTTON      "~n",IDC_BUTTON_NTILDE,37,44,15,11
+    PUSHBUTTON      ".t",IDC_BUTTON_TDOT,55,44,15,11
+    PUSHBUTTON      ".d",IDC_BUTTON_DDOT,73,44,15,11
+    PUSHBUTTON      ".n",IDC_BUTTON_NDOTBELOW,91,44,15,11
+    PUSHBUTTON      ".l",IDC_BUTTON_LDOT,109,44,15,11
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,1
+ PRODUCTVERSION 2,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Hackers of Russia\0"
+            VALUE "FileDescription", "PaliTextReader WCE MFC Application\0"
+            VALUE "FileVersion", "2, 0, 0, 1\0"
+            VALUE "InternalName", "PaliTextReader\0"
+            VALUE "LegalCopyright", "Copyright © PavelBure, 2006\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "PaliTextReader.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "PaliTextReader Application\0"
+            VALUE "ProductVersion", "2, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Search in this text...",      ID_SEARCH
+        MENUITEM "Bookmark this page",          ID_BOOKMARK_PAGE
+        MENUITEM "Toggle dictionary",           IDM_SHOWDIC
+        MENUITEM "Select book...",              IDM_SELECTBOOK
+        MENUITEM "Preferences...",              IDM_PREFERENCES
+        MENUITEM "Exit",                        IDM_EXIT
+    END
+END
+
+IDR_CONTEXTMENU MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Translate term",              IDC_TRANSLATE
+        MENUITEM "Copy text",                   IDC_COPY
+    END
+END
+
+IDR_EMPTYMENU MENU DISCARDABLE 
+BEGIN
+    MENUITEM " ",                           ID_MENUITEM32790
+END
+
+IDR_EDITMENU MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Undo",                        ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut",                         ID_EDIT_CUT
+        MENUITEM "Copy",                        ID_EDIT_COPY
+        MENUITEM "Paste",                       ID_EDIT_PASTE
+        MENUITEM "Delete",                      ID_EDIT_DELETE
+    END
+END
+
+IDR_TREEMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Root"
+    BEGIN
+        MENUITEM "Bookmark this item",          IDM_BOOKMARK, GRAYED
+        MENUITEM "Rename",                      IDM_RENAME, GRAYED
+        MENUITEM "Delete",                      IDM_DELETEBOOKMARK, GRAYED
+        MENUITEM "Find...",                     ID_FIND_ITEM, GRAYED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_MAINMENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_MAINMENU, 1,
+    I_IMAGENONE, ID_TOOLS, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_CAP_TOOLS, 0, 0,
+END
+
+IDR_CONTEXTMENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_CONTEXTMENU, 1,
+    I_IMAGENONE, ID_CONTEXTMENUROOT, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_CAP_MENUITEM32814, 0, 0,
+END
+
+IDR_EDITMENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_EDITMENU, 1,
+    I_IMAGENONE, IDM_EDITMENUROOT, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_CAP_MENUITEM32810, 0, 0,
+END
+
+IDR_TREEMENU SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_TREEMENU, 1,
+    I_IMAGENONE, ID_CONTEXTMENUROOT, TBSTATE_ENABLED, 
+    TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, IDS_CAP_MENUITEM32816, 0, 0,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PREFERENCES, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_PALI_ENTRY, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\PaliTextReader.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TREEIMAGES          BITMAP  DISCARDABLE     "images\\treeimages.bmp"
+IDR_MAIN_TOOLBAR        BITMAP  DISCARDABLE     "images\\toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAIN_TOOLBAR TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      IDM_SELECTBOOK
+    BUTTON      IDM_SHOWDIC
+    SEPARATOR
+    BUTTON      ID_MOVE_FIRST
+    BUTTON      ID_MOVE_PREV
+    BUTTON      ID_MOVE_NEXT
+    BUTTON      ID_MOVE_LAST
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_FILE            "File"
+    IDS_CAP_TOOLS           "Tools"
+    IDM_SHOWDIC             "Toggle dictionary"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_MENUITEM32791   " "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_ROOT            "Root"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_MENUITEM32816   "Root"
+    ID_MOVE_FIRST           "Go to first match"
+    ID_MOVE_PREV            "Go to previous match"
+    ID_MOVE_LAST            "Go to last match"
+    ID_MOVE_NEXT            "Go to next match"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FIND_ITEM            "Find by name"
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_MENUBAR1 RCDATA DISCARDABLE 
+BEGIN
+
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PaliTextReader.rc2""  // non-Microsoft eMbedded Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""wceres.rc""         // WCE-specific components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\PaliTextReader.rc2"  // non-Microsoft eMbedded Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "wceres.rc"         // WCE-specific components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

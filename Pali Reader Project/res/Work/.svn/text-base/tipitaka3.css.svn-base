@@ -1,0 +1,74 @@
+/* This is the stylesheet for Roman CSX encoding. 
+*/
+
+body { font-family:"Times_CSX", "Times_CSX+", "Roman Sanskrit Serif", CSUtopia, "Roman Sanskrit";
+	background:white; }
+
+SPAN {}
+.variant {color: blue}
+
+p {
+border-top: 0in; border-bottom: 0in;
+padding-top: 0in; padding-bottom: 0in;
+margin-top: 0in; margin-bottom: 0.5cm;
+}
+/*  */
+.c01 { font-size: 12pt; text-indent: 2em; margin-bottom: 0em;}
+
+
+.c02 { font-size: 12pt;}
+
+
+.c03 { font-size: 12pt; text-indent: 2em;}
+
+/* Namo tassa, and nitthita -- no unique structural distinction */
+.c06 { font-size: 12pt; text-align:center;}
+
+/* Unindented text */
+.c07 { font-size: 12pt;}
+
+/* Book */
+.c10 { font-size: 21pt; text-align:center; font-weight: bold;}
+
+/* Sutta */
+.c11 { font-size: 18pt; text-align:center; font-weight: bold;}
+
+/* Nikaaya */
+.c12 { font-size: 24pt; text-align:center; font-weight: bold;}
+
+/* Section (above 14)*/
+.c13 { font-size: 12pt; text-align:center; font-weight: bold;}
+
+/* Section */
+.c14 { font-size: 12pt; text-align:center; font-weight: bold;}
+
+/* Gatha line */
+.c21 { font-size: 12pt; text-indent: 4em; margin-bottom: 0em;}
+
+/* Gatha line */
+.c22 { font-size: 12pt; text-indent: 7em; margin-bottom: 0.5cm;}
+
+/* Gatha line */
+.c26 { font-size: 12pt; text-indent: 4em; margin-bottom: 0em;}
+
+/* Gatha line */
+.c27 { font-size: 12pt; text-indent: 7em; margin-bottom: 0em;}
+
+
+/*DN Muula Structure
+{
+06 Namo tassa..
+12 Nikaaya
+10 Book
+}
+ |	
+ |___11 Sutta
+ |    |
+ |    |___14 Section
+ |         |
+ |         |___ Text paras (01,02,03,07), gathas (21,22,26,27), various nitthitas (06)
+ |
+ |___11 Sutta
+     (etc.)
+
+*/
